@@ -2,8 +2,6 @@ require('lazy').setup({
 
   require 'kickstart/plugins/sleuth',
 
-  -- require 'kickstart/plugins/autopairs',
-
   require 'kickstart/plugins/comment',
 
   require 'kickstart/plugins/gitsigns',
@@ -26,9 +24,11 @@ require('lazy').setup({
 
   require 'kickstart/plugins/treesitter',
 
-  require 'kickstart/plugins/indent_line',
-
   require 'kickstart/plugins/lint',
+
+  require 'kickstart/plugins/diffview',
+
+  require 'kickstart/plugins/lualine',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
