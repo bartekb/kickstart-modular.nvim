@@ -40,6 +40,7 @@ return {
 
       -- Config
       local config = {
+        theme = "catppuccin",
         options = {
           -- Disable sections and component separators
           component_separators = '',
@@ -83,13 +84,13 @@ return {
         table.insert(config.sections.lualine_x, component)
       end
 
-      ins_left {
-        function()
-          return '▊'
-        end,
-        color = { fg = colors.blue }, -- Sets highlighting of component
-        padding = { left = 0, right = 1 }, -- We don't need space before this
-      }
+      -- ins_left {
+      --   function()
+      --     return '▊'
+      --   end,
+      --   color = { fg = colors.blue }, -- Sets highlighting of component
+      --   padding = { left = 0, right = 1 }, -- We don't need space before this
+      -- }
 
       ins_left {
         -- mode component
@@ -133,6 +134,7 @@ return {
 
       ins_left {
         'filename',
+        path = 1,
         cond = conditions.buffer_not_empty,
         color = { fg = colors.magenta, gui = 'bold' },
       }
@@ -154,13 +156,13 @@ return {
 
       -- Insert mid section. You can make any number of sections in neovim :)
       -- for lualine it's any number greater then 2
-      ins_left {
-        function()
-          return '%='
-        end,
-      }
+      -- ins_left {
+      --   function()
+      --     return '%='
+      --   end,
+      -- }
 
-      ins_left {
+      ins_right {
         -- Lsp server name .
         function()
           local msg = 'No Active Lsp'
@@ -214,23 +216,13 @@ return {
         cond = conditions.hide_in_width,
       }
 
-      ins_right {
-        function()
-          return '▊'
-        end,
-        color = { fg = colors.blue },
-        padding = { left = 1 },
-      }
-
-
-
-
-
-
-
-
-
-
+      -- ins_right {
+      --   function()
+      --     return '▊'
+      --   end,
+      --   color = { fg = colors.blue },
+      --   padding = { left = 1 },
+      -- }
 
       require('lualine').setup(config)
     end,

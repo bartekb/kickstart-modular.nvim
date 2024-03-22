@@ -1,5 +1,7 @@
 require('lazy').setup({
 
+  require 'kickstart/plugins/colorscheme',
+
   require 'kickstart/plugins/sleuth',
 
   require 'kickstart/plugins/comment',
@@ -16,8 +18,6 @@ require('lazy').setup({
 
   require 'kickstart/plugins/cmp',
 
-  require 'kickstart/plugins/tokyonight',
-
   require 'kickstart/plugins/todo-comments',
 
   require 'kickstart/plugins/mini',
@@ -29,6 +29,10 @@ require('lazy').setup({
   require 'kickstart/plugins/diffview',
 
   require 'kickstart/plugins/lualine',
+
+  require 'kickstart/plugins/nvim-test',
+
+  require 'kickstart/plugins/nvim-tree',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

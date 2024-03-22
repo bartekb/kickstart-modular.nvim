@@ -43,6 +43,15 @@ vim.keymap.set('n', '<leader>do', '<cmd>DiffviewOpen<CR>', { desc = '[O]pen Git 
 vim.keymap.set('n', '<leader>dh', '<cmd>DiffviewFileHistory<CR>', { desc = 'Show Git [D]iffview [H]istory' })
 vim.keymap.set('n', '<leader>dc', '<cmd>DiffviewClose<CR>', { desc = '[C]lose Git [D]iffview' })
 
+-- Nvim-tree keymaps
+vim.keymap.set('n', '<leader>n', '<cmd>NvimTreeToggle<CR>', { desc = '[N]vim [T]ree' })
+
+-- Rspec runner
+vim.keymap.set('n', '<C-l>', '<cmd>TestNearest<CR>', { desc = 'Run [T]est under cursor' })
+
+-- Remove buffer
+vim.keymap.set('n', '<C-q>', '<cmd>bd<CR>', { desc = '[B]uffer [D]elete' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
